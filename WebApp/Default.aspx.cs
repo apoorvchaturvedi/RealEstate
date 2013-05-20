@@ -15,7 +15,7 @@ public partial class Default3 : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            
+
         }
     }
 
@@ -35,9 +35,9 @@ public partial class Default3 : System.Web.UI.Page
                     if (type == "User")
                     {
                         Session.RemoveAll();
-                        Session["id"] = dr[0].ToString();
+                      //  Session["id"] = dr[0].ToString();
 
-                        Session["type"] = dr[3].ToString();
+                       // Session["type"] = dr[3].ToString();
                         //Session["newunitsessionid"] = dr[0].ToString();
                         //Session["MyId"] = dr[0].ToString();
                         //Session["MyuserId"] = dr[0].ToString();

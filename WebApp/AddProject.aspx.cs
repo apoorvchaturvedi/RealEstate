@@ -25,19 +25,19 @@ public partial class AddProject : System.Web.UI.Page
     protected void Button6_Click(object sender, EventArgs e)
     {
         
-        int p;
-       DateTime sdate =DateTime.ParseExact(txtstartdate.Text, "dd/MM/yyyy", null);
+       // int p;
+       //DateTime sdate =DateTime.ParseExact(txtstartdate.Text, "dd/MM/yyyy", null);
 
-       DateTime edate =DateTime.ParseExact(txtenddate.Text, "dd/MM/yyyy", null);
-       string uid = Session["proid"].ToString();
-        p = d.insertproject(txtprojectName.Text, txtCategory.Text, sdate, edate, txtstatus.Text, txtlocation.Text,Convert.ToDecimal(txtbudget.Text));
+       //DateTime edate =DateTime.ParseExact(txtenddate.Text, "dd/MM/yyyy", null);
+       //string uid = Session["proid"].ToString();
+       // p = d.insertproject(txtprojectName.Text, txtCategory.Text, sdate, edate, txtstatus.Text, txtlocation.Text,Convert.ToDecimal(txtbudget.Text));
 
-       DataSet ds= d.projectid(txtprojectName.Text);
-       if (ds.Tables[0].Rows.Count > 0)
-       {
-           string projectid = ds.Tables[0].Rows[0].ItemArray[0].ToString();
-          p= d.insetuserprojectinfo(Convert.ToInt32(uid),Convert.ToInt32(projectid));
-       }
+       //DataSet ds= d.projectid(txtprojectName.Text);
+       //if (ds.Tables[0].Rows.Count > 0)
+       //{
+       //    string projectid = ds.Tables[0].Rows[0].ItemArray[0].ToString();
+       //   p= d.insetuserprojectinfo(Convert.ToInt32(uid),Convert.ToInt32(projectid));
+       //}
 
 
        if (p >= 1)

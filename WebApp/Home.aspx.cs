@@ -17,7 +17,6 @@ public partial class Home : System.Web.UI.Page
             LinkButton5.Visible = false;
             LinkButton6.Visible = true;
         }
-       
         
     }
 

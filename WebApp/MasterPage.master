@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function noBack() {
+            window.history.forward()
+        }
+        noBack();
+        window.onload = noBack;
+        window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+        window.onunload = function () { void (0) }
+    </script>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            text-align: center;
+            float:left;
+            margin-top:50PX;
+        }
+        .style6
+        {
+            margin-right: 40px;
+            text-align: right;
+        }
+       
+        .style8
+        {
+            margin:0px;
+            padding:0px;
+            float:left;
+            width: 210px;
+            height: 96px;
+        }
+        .style9
+        {float:left;
+         width:208px;
+            height: 416px;
+        }
+        .style10
+        {
+            margin-left:214px;
+            margin-top:20px;
+            padding-top:32px;
+         }
+        .style11
+        {
+            margin:0px;
+            padding:0px;
+            height:25px;
+            font-size:17px;
+         }
+        .a
+        {
+            text-decoration:none;
+            color:Blue;
+        }
+        a:hover
+        {
+            text-decoration:underline;
+            color:Blue;
+        }
+        .title
+        {
+            text-align:center;
+            font-size:25px;
+          
+            
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="style9">    
+    <a href="http://www.mnnbi.com"><img src="logo.jpg" class="style8" alt=""/></a>
+    <asp:Panel ID="Panel1" runat="server" CssClass="style2" Width="210px" Height="267px"
+                    Font-Bold="True" BorderColor="Blue" BorderWidth="2px">
+                 <asp:Label ID="Label1" runat="server" Text="Action Panel" BackColor="#0066FF" Font-Size="17px"
+                        Width="210px"  Font-Bold="True" Height="22px"></asp:Label>
+                    <br />
+                     <p class="style11"><a href="changepassword.aspx" class ="a">Change password</a></p>
+                    -------------------------------------
+                    <p class="style11"><a href="ProjectCategory.aspx" class ="a">Project Category Info</a></p>
+                    <p class="style11"><a href="Home.aspx" class ="a">Project Info</a></p>
+                    <p class="style11"><a href="Projectblock.aspx" class ="a">Block Info</a></p>
+                    <p class="style11"><a class="a" href="Plot.aspx">Unit Info</a></p>
+                    <p class="style11"><a href="Link.aspx" class ="a">Unit Target Link Info</a></p>
+                    <%--<p class="style11"><a href="" class ="a">Project Cash Info</a></p>--%>
+                    <p class="style11"><a href="ProjectSummary.aspx" class ="a">Project Summary Info</a></p>
+                     <p class="style11"><a href="AdminLink.aspx" class ="a" id="myid" runat="server">Admin UnitTarget Link Info</a></p>
+                </asp:Panel></div>
+                <div class="title">
+                    <asp:Label ID="Label2" runat="server" Text="BPTP PROJECT MONITORING SYSTEM" 
+                        Font-Bold="True" ForeColor="#FF6600"></asp:Label>
+&nbsp;</div>
+                <div class="style10">
+                
+    <table class="style1">
+        <tr>
+            <td class="style6" bgcolor="Blue">
+                <asp:Button ID="Button1" runat="server" Text="LogOut" onclick="Button1_Click" 
+                    CssClass="style11" Font-Bold="True" Height="28px" Width="73px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="style11">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
+                    </asp:ContentPlaceHolder>
+                </td>
+        </tr>
+        </table>
+        </div>
+    </form>
+</body>
+</html>

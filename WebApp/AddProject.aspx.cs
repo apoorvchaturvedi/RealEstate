@@ -44,13 +44,13 @@ public partial class AddProject : System.Web.UI.Page
        {
            Label20.Text = "Your Record Insert Successfully.";
        }
-       //txtstatus.Text = "";
-       //txtstartdate.Text = "";
-       //txtprojectName.Text = "";
-       //txtlocation.Text = "";
-       //txtenddate.Text = "";
-       //txtCategory.Text = "";
-       //txtbudget.Text = "";
+       txtstatus.Text = "";
+       txtstartdate.Text = "";
+       txtprojectName.Text = "";
+       txtlocation.Text = "";
+       txtenddate.Text = "";
+       txtCategory.Text = "";
+       txtbudget.Text = "";
 
     }
     protected void Button8_Click(object sender, EventArgs e)

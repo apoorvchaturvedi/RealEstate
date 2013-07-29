@@ -790,20 +790,20 @@ public class Dal
 
     public DataSet binddelete(int p)
     {
-        try
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select  distinct a.[Project Name],b.Block,c.PlotNo,c.Floor,c.[Unit No],d.ID,d.[Task details],d.[Actual-Date],d.[update date],d.[Target-Date],d.Remarks from Projects a join Block b on a.ID=b.Project join Unit c on b.ID=c.Block join [Unit-Target-Linktable] d on c.ID=d.UNIT where d.ID="+p+"", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            con.Close();
-            return ds;
-        }
-        catch
-        {
-            throw;
-        }
+        //try
+        //{
+        //    con.Open();
+        //    SqlCommand cmd = new SqlCommand("select  distinct a.[Project Name],b.Block,c.PlotNo,c.Floor,c.[Unit No],d.ID,d.[Task details],d.[Actual-Date],d.[update date],d.[Target-Date],d.Remarks from Projects a join Block b on a.ID=b.Project join Unit c on b.ID=c.Block join [Unit-Target-Linktable] d on c.ID=d.UNIT where d.ID="+p+"", con);
+        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //    DataSet ds = new DataSet();
+        //    da.Fill(ds);
+        //    con.Close();
+        //    return ds;
+        //}
+        //catch
+        //{
+        //    throw;
+        //}
     }
 
     //public int deleteblockdal(int blockid)
